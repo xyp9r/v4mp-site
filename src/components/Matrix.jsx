@@ -54,7 +54,7 @@ export default function Matrix() {
 		const handleResize = () => {
 			setCanvasSize();
 			column = canvas.width / fontSize;
-			drops = Array(Math.floor(columns)).fill(1);
+			drops = Array(Math.floor(column)).fill(1);
 		};
 
 		window.addEventListener('resize', handleResize);
