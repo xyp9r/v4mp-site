@@ -2,6 +2,7 @@ import Clock from './components/Clock';
 import ViewCounter from './components/ViewCounter'
 import Matrix from './components/Matrix'
 import TypingText from './components/TypingText'
+import CustomCursor from './components/CustomCursor'
 
 export default function App() {
   return (
@@ -162,6 +163,9 @@ export default function App() {
           ESC | Close
         </div>
       </div>
+
+      {/* Наш новый живой курсор */}
+      <CustomCursor />
     </>
   );
 }
