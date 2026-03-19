@@ -26,11 +26,11 @@ export default function WakaTimeWidget() {
 				const totalTime = todayData.grand_total.text;
 
 				if (totalTime === "0 secs" || !totalTime) {
-					setHours("system idle...");
-					setLangText("waiting for input");
+					setHours("0 secs");
+					setLangText("system idle...");
 					setIsActive(false);
 				} else {
-					setLangText(totalTime);
+					setHours(totalTime);
 					setIsActive(true);
 				}
 			} catch (error) {

@@ -8,7 +8,7 @@ export default function TelegramStatus () {
 	useEffect(() => {
 		// 2. подключаемся к моему живому серверу
 		const tgStream = new EventSource('https://tg-api-status.onrender.com/stream');
-		
+
 		// 3. Слушаем радио-эфир
 		tgStream.onmessage = (event) => {
 			const data = JSON.parse(event.data);
@@ -20,11 +20,11 @@ export default function TelegramStatus () {
 				setStatusClass('online');
 			} else if (data.status === 'offline') {
 				if (data.last_online) {
-					setStatusText(`[${data.last_online}]`);
+					setStatusText(`[$last_online: {data.last_online}]`);
 				} else {
 					setStatusText('[offline]')
 				}
-				setStatusText('[offline]');
+				setStatusText('offline');
 			} else {
 				setStatusText('[unknown]');
 				setStatusClass('[offline]');
@@ -45,7 +45,7 @@ export default function TelegramStatus () {
 
 	// 6. Отрисовываем спан который сам меняет класс и текс
 	return (
-		<span id="tg-status" className={`status-online ${statusClass}`}>
+		<span id="tg-status" className={statusClass === 'online' ? 'status-online' : 'status-offline'}>
 			{statusText}
 		</span>
 	);
