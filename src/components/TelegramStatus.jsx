@@ -13,6 +13,8 @@ export default function TelegramStatus () {
 		tgStream.onmessage = (event) => {
 			const data = JSON.parse(event.data);
 
+			console.log('ОТВЕТ ОТ ТЕЛЕГРАМ СЕРВЕРА:', data);
+
 			if (data.status === 'online') {
 				setStatusText('[online]');
 				setStatusClass('online');
@@ -22,10 +24,10 @@ export default function TelegramStatus () {
 				} else {
 					setStatusText('[offline]')
 				}
-				setStatusText('offline');
+				setStatusText('[offline]');
 			} else {
 				setStatusText('[unknown]');
-				setStatusClass('offline');
+				setStatusClass('[offline]');
 			}
 		};
 
