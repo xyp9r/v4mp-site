@@ -6,7 +6,7 @@
 This is a fully dynamic Single Page Application (SPA) dashboard built with **React**. It connects to multiple APIs in real-time to display my current status, what I'm listening to, and my coding statistics, with instant component rendering and zero page reloads.
 
 ## 🔌 Live Integrations (Real-Time Data)
-* **🎵 Spotify / Last.fm API:** Displays the track I am currently listening to, complete with album art and a CSS equalizer animation.
+* **🎵 Spotify / Soundcloud / Last.fm API:** Displays the track I am currently listening to, complete with album art and a CSS equalizer animation.
 * **⌨️ WakaTime API:** Pulls my coding activity for the day, top programming languages, and my most-used IDE over the last 7 days.
 * **🎮 Discord Status (Lanyard API):** Uses WebSockets to stream my live Discord presence (Online/Idle/DND) and current rich presence activity (e.g., what game I'm playing).
 * **📱 Telegram Status:** Connects to a custom backend (`v4mp-tg-api`) via Server-Sent Events (SSE) to show my real-time Telegram online status.
