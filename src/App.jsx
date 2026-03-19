@@ -8,6 +8,7 @@ import WakaTimeWidget from './components/WakaTimeWidget'
 import TelegramStatus from './components/TelegramStatus'
 import DiscordStatus from './components/DiscordStatus'
 import EmailWidget from './components/EmailWidget'
+import ContextMenu from './components/ContextMenu'
 
 export default function App() {
   return (
@@ -109,20 +110,7 @@ export default function App() {
       </div>
 
       {/* КАСТОМНОЕ МЕНЮ (скрыто по умолчанию) */}
-      <div id="custom-menu" className="custom-menu">
-        <div className="menu-header">
-          <span className="prompt">root@v4mp.dev</span> :~$ context-menu 
-        </div>
-        <ul className="menu-list">
-          <li id="menu-copy"><span className="green-arrow">▶</span> Copy</li>
-          <li><span className="green-arrow">▶</span> Select all</li>
-          <li><span className="green-arrow">▶</span> Reload</li>
-        </ul>
-        <div className="menu-footer">
-          ESC | Close
-        </div>
-      </div>
-
+      <ContextMenu />
       {/* Наш новый живой курсор */}
       <CustomCursor />
     </>

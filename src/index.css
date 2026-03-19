@@ -391,13 +391,14 @@ a, .email-btn, .menu-list li {
   border-bottom: 1px solid #333;
   font-size: 13px;
   color: #fff;
+  white-space: nowrap;
 }
 
 .menu-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  padding: 5px 0;
+  padding: 0;
 }
 
 .menu-list li {
@@ -407,8 +408,7 @@ a, .email-btn, .menu-list li {
   display: flex;
   align-items: center;
   gap: 12px;
-  border-bottom: 1px solid #111;
-  transition: all 0.2s ease;
+  transition: background-color 0.2 ease, color 0.2s ease;
 }
 
 .menu-list li:hover {
