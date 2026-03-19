@@ -7,6 +7,7 @@ import SpotifyWidget from './components/SpotifyWidget'
 import WakaTimeWidget from './components/WakaTimeWidget'
 import TelegramStatus from './components/TelegramStatus'
 import DiscordStatus from './components/DiscordStatus'
+import EmailWidget from './components/EmailWidget'
 
 export default function App() {
   return (
@@ -95,16 +96,7 @@ export default function App() {
               </a>
             </li>
 
-            <li> 
-              <a href="mailto:sirenko.ivan77@gmail.com" id="email-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-                <TypingText text="i@v4mp.eu" delay={1800} />
-                <span className="badge" id="badge-eu">eu</span>
-                <span className="badge" id="badge-us" style={{ opacity: 0.5 }}>us</span>
-              </a>
-            </li>
+            <EmailWidget />
           </ul>
 
           {/* ВИДЖЕТЫ (Spotify & Wakatime) */}

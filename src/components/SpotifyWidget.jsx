@@ -55,7 +55,7 @@ return (
 	<div className="status-panel">
 		<div className="command-line">
 			<span className="prompt">root@v4mp.dev</span>
-			<span className="command">music --now-playing</span>
+			<span className="command"> music --now-playing</span>
 		</div>
 
 		<div className="panel-box">
