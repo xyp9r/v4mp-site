@@ -7,8 +7,8 @@ export default function TelegramStatus () {
 
 	useEffect(() => {
 		// 2. подключаемся к моему живому серверу
-		const tgStream = new EventSource('https://v4mp-tg-api.onrender.com/stream');
-
+		const tgStream = new EventSource('https://tg-api-status.onrender.com/stream');
+		
 		// 3. Слушаем радио-эфир
 		tgStream.onmessage = (event) => {
 			const data = JSON.parse(event.data);
