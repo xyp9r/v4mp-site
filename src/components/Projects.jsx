@@ -60,7 +60,7 @@ export default function Projects({ onBack }) {
       {/* 3. OSINT BOT */}
       <div className="project-card">
         <div className="project-header">
-          <a href="https://t.me/slatherhouse_bot" target="_blank" rel="noreferrer" className="project-name"> OSINT Telegram Bot</a>
+          <a href="https://t.me/id561bot" target="_blank" rel="noreferrer" className="project-name"> OSINT Telegram Bot</a>
           <span className="project-year">2026</span>
         </div>
         <div className="project-desc">helpful bot with osint tools</div>

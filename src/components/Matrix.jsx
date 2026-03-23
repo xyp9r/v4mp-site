@@ -26,7 +26,24 @@ export default function Matrix() {
 
 		let animationFrameId; // сюда запишем ID анимации чтобы потом ее остановить
 
-		const drawMatrix = () => {
+		// ---  Новая логика чтобы на больших герцах не было быстро  ---
+
+		let lastTime = 0;
+		const fps = 25; // ограничение в 25 кадров
+		const nextFrameTime = 1000 / fps;
+
+		const drawMatrix = (currentTime) => {
+			animationFrameId = requestAnimationFrame(drawMatrix);
+
+			// считаем, сколько времени прошло с прошлого кадра
+			const delta = currentTime - lastTime;
+
+			// Если прошло меньше нужного интервала - пропускаем это
+			if (delta < nextFrameTime) return;
+
+			// Если пора рисовать - обновляем время последнего карда
+			lastTime = currentTime - (delta % nextFrameTime);
+	
 			// полупрозрачный фон для эффекта затухания
 			ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
 			ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -44,11 +61,10 @@ export default function Matrix() {
 				drops[i]++;
 			}
 
-			// Зацикливаем анимацию
-			animationFrameId = requestAnimationFrame(drawMatrix);
 		};
 
-		drawMatrix();
+		// Зацикливаем анимацию
+			animationFrameId = requestAnimationFrame(drawMatrix);
 
 		// Слушатель изменения ока( сделал чуть умнее чтобы капли пересчитывались )
 		const handleResize = () => {
