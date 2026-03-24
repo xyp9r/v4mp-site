@@ -12,14 +12,19 @@ import DiscordStatus from './components/DiscordStatus'
 import EmailWidget from './components/EmailWidget'
 import ContextMenu from './components/ContextMenu'
 import Projects from './components/Projects'
+import HeartOverlay from './components/HeartOverlay'
 
 export default function App() {
 
   const [currentPage, setCurrentPage] = useState('home');
+  const [isHeartOpen, setIsHeartOpen] = useState(false);
 
   return (
     <>
       <Matrix />
+
+      {/* Если isHeartOpen = true, рендерим оверлей и передаем ему функцию для самозакрытия */}
+      {isHeartOpen && <HeartOverlay onClose={() => setIsHeartOpen(false)} />}
       
       {currentPage === 'home' ? (
       <div className="terminal-window">
@@ -52,7 +57,15 @@ export default function App() {
           </pre>
           
           <div className="command-line">
-            <span className="prompt">root@v4mp.dev</span> <span className="command">my &lt;3.txt</span>
+            <span className="prompt">root@v4mp.dev</span>{' '} 
+            <span className="command"
+              onClick={() => setIsHeartOpen(true)}
+              style={{ cursor: 'pointer', transition: 'text-shadow 0.3s' }}
+              onMouseEnter={(e) => e.target.style.textShadow = '0 0 8px rgba(76, 175, 80, 0.8'}
+              onMouseLeave={(e) => e.target.style.textShadow = 'none'}
+            >
+              my &lt;3.txt
+            </span>
           </div> 
           
           <div className="info-block">

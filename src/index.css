@@ -472,7 +472,7 @@ a, .email-btn, .menu-list li {
 
   /* Уменьшаем большой текст */
   .ascii-art {
-    font-size: 4.1px;
+    font-size: 8px;
     overflow-x: auto;
   }
 
@@ -713,4 +713,49 @@ html, body, *, *::before, *::after {
 @keyframes fadeTrail {
   0% { opacity: 0.8; transform: scale(1);}
   100% { opacity: 0; transform: scale(0); }
+}
+
+/* --- Анимация сердца и оверлея --- */
+.heart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Плавное появление и затухание за 6 сек */
+  animation: fadeInOut 6s ease-in-out forwards;
+}
+
+.heart-container {
+  /* Чтобы сердце было побольше */
+  transform: scale(2);
+}
+
+.animated-heart path {
+  /* Это длина контура моего пиксельного сердца, прячем линию и плавно ее выдвигаем */
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawHeart 2s linear forwards;
+  /* Добавляем легкое неоновое свечение самому сердцу */
+  filther: drop-shadow(0 0 8px rgba(76, 175, 80, 0.8));
+}
+
+/* Анимация рисования линий */
+@keyframes drawHeart {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Анимация черного фона */
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
 }
