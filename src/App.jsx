@@ -45,12 +45,10 @@ export default function App() {
         <div className="terminal-body">
           {/* ASCII ART */}
           <pre className="ascii-art">
-{`    _ _                           __     __  __            __   _                  _ _               __   _            
-   (_| )____ ___     ____  ____  / /_   / /_/ /_  ___     / /__(_)___  ____ _     (_| )____ ___     / /__(_)___  ____ _
-  / /|// __ \`__ \\   / __ \\/ __ \\/ __/  / __/ __ \\/ _ \\   / //_/ / __ \\/ __ \`/    / /|// __ \`__ \\   / //_/ / __ \\/ __ \`/
- / /  / / / / / /  / / / / /_/ / /_   / /_/ / / /  __/  / ,< / / / / / /_/ /    / /  / / / / / /  / ,< / / / / / /_/ / 
-/_/  /_/ /_/ /_/  /_/ /_/\\____/\\__/   \\__/_/ /_/\\___/  /_/|_/_/_/ /_/\\__, ( )  /_/  /_/ /_/ /_/  /_/|_/_/_/ /_/\\__, /  
-                                                                    /____/|/                                  /____/   `}
+{`▌   ▐▘▜ ▘       ▌    ▌▗             ▗ ▌   ▘       ▘        
+▛▌▄▖▜▘▐ ▌█▌▛▘  ▛▌▛▌▛▌ ▜▘  ▛▌█▌█▌▛▌  ▜▘▛▌█▌▌▛▘  ▌▌▌▌▛▌▛▌▛▘  
+▙▌  ▐ ▐▖▌▙▖▄▌  ▙▌▙▌▌▌ ▐▖  ▙▌▙▖▙▖▙▌  ▐▖▌▌▙▖▌▌   ▚▚▘▌▌▌▙▌▄▌▗ 
+                          ▌     ▌                    ▄▌    `}
           </pre>
           
           <div className="command-line">
@@ -62,8 +60,7 @@ export default function App() {
               <img src="/avatar.png" alt="my profile picture" />
             </div>
             <div className="bio-text">
-              i'm ivan, 18 y.o<br />
-              smell like maison margiela when the rain stops<br /> 
+            f/e dev / staying lowkey. mostly just centering divs tbh.<br />
               <span onClick={() => setCurrentPage('projects')} className="projects-title-link" style={{cursor: 'pointer'}}>projects</span>
             </div>
           </div>
@@ -75,7 +72,7 @@ export default function App() {
           {/* СОЦСЕТИ */}
           <ul className="social-links">
             <li>
-              <a href="https://t.me/fuck4g" target="_blank" rel="noreferrer">
+              <a href="https://t.me/dxrge" target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42l10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001l-.122 1.715c.179.035.355.067.531.097l.005-.002l.005.002l2.733 5.447c.202.4.404.8.606 1.2c.202-.4.404-.8.606-1.2l1.55-2.699c.688-.328 1.377-.657 2.065-.985l3.638 2.686c.838.462 1.441.227 1.65-.776l2.991-14.085c.306-1.23-.468-1.797-1.603-1.267z"/>
                 </svg>

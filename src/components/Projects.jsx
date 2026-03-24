@@ -19,7 +19,7 @@ export default function Projects({ onBack }) {
       {/* 1. НОВЫЙ ПРОЕКТ - REACT ВЕРСИЯ */}
       <div className="project-card">
         <div className="project-header">
-          <a href="https://v4mp.dev" className="project-name">Dashboard Site v2 (React)</a>
+          <a href="https://v4mp.dev" className="project-name">v4mp v2 (React)</a>
           <span className="project-year">2026</span>
         </div>
         <div className="project-desc">interactive web-terminal SPA</div>
@@ -28,26 +28,6 @@ export default function Projects({ onBack }) {
           <span className="tag">JavaScript (ES6+)</span>
           <span className="tag">CSS3</span>
           <span className="tag">Vite</span>
-          <span className="tag">Telegram API</span>
-          <span className="tag">Spotify API</span>
-          <span className="tag">SoundCloud API</span>
-          <span className="tag">Discord Lanyard API</span>
-          <span className="tag">Wakatime API</span>
-          <span className="tag">Render CI/CD</span>
-        </div>
-      </div>
-
-      {/* 2. СТАРЫЙ DASHBOARD ИЗ HTML */}
-      <div className="project-card">
-        <div className="project-header">
-          <a href="https://xyp9r.github.io/my-links-site/" target="_blank" rel="noreferrer" className="project-name">Dashboard Site v1 (Vanilla)</a>
-          <span className="project-year">2026</span>
-        </div>
-        <div className="project-desc">interactive web-terminal</div>
-        <div className="project-tags">
-          <span className="tag">JavaScript (ES6)</span>
-          <span className="tag">CSS3</span>
-          <span className="tag">HTML5</span>
           <span className="tag">Telegram API</span>
           <span className="tag">Spotify API</span>
           <span className="tag">SoundCloud API</span>
@@ -79,6 +59,26 @@ export default function Projects({ onBack }) {
           <span className="tag">OSINT Catalog</span>
           <span className="tag">Data Breach</span>
           <span className="tag">EXIF Metadata</span>
+        </div>
+      </div>
+
+            {/* 2. СТАРЫЙ DASHBOARD ИЗ HTML */}
+      <div className="project-card">
+        <div className="project-header">
+          <a href="https://xyp9r.github.io/my-links-site/" target="_blank" rel="noreferrer" className="project-name">v4mp v1 (Vanilla JS)</a>
+          <span className="project-year">2026</span>
+        </div>
+        <div className="project-desc">old version on my site</div>
+        <div className="project-tags">
+          <span className="tag">JavaScript (ES6)</span>
+          <span className="tag">CSS3</span>
+          <span className="tag">HTML5</span>
+          <span className="tag">Telegram API</span>
+          <span className="tag">Spotify API</span>
+          <span className="tag">SoundCloud API</span>
+          <span className="tag">Discord Lanyard API</span>
+          <span className="tag">Wakatime API</span>
+          <span className="tag">Render CI/CD</span>
         </div>
       </div>
 
