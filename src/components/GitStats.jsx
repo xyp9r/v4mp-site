@@ -10,7 +10,12 @@ export default function GitStats() {
 		.then(res => res.json())
 		.then(data => {
 			// Ищем последнее действие типа "PushEvent"
-			const lastPush = data.find(event => event.type === 'PushEvent');
+			const lastPush = data.find(event => 
+				event.type === 'PushEvent' &&
+				event.payload &&
+				event.payload.commits &&
+				event.payload.commits.length > 0
+			);
 
 			if (lastPush && lastPush.payload.commits.length > 0) {
 				// Берем последний коммит из пуша
