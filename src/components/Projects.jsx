@@ -29,6 +29,7 @@ export default function Projects({ onBack }) {
           <span className="tag">CSS3</span>
           <span className="tag">Vite</span>
           <span className="tag">Telegram API</span>
+          <span className="tag">GitHub API</span>
           <span className="tag">Spotify API</span>
           <span className="tag">SoundCloud API</span>
           <span className="tag">Discord Lanyard API</span>

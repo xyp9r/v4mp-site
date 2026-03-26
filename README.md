@@ -10,6 +10,7 @@ This is a fully dynamic Single Page Application (SPA) dashboard built with **Rea
 * **⌨️ WakaTime API:** Pulls my coding activity for the day, top programming languages, and my most-used IDE over the last 7 days.
 * **🎮 Discord Status (Lanyard API):** Uses WebSockets to stream my live Discord presence (Online/Idle/DND) and current rich presence activity (e.g., what game I'm playing).
 * **📱 Telegram Status:** Connects to a custom backend (`v4mp-tg-api`) via Server-Sent Events (SSE) to show my real-time Telegram online status.
+* **🖥 GitHub Commits Status:** Uses GitHub public API my account (xyp9r) and show my latest commits and can see whats commit there.
 * **👁️ Page Views:** Tracks unique visits using CounterAPI.
 
 ## 🎨 UI / UX Features
