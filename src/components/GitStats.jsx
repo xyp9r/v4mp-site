@@ -6,32 +6,24 @@ export default function GitStats() {
 
 	useEffect(() => {
 		// Делаем запрос к публичным событиям моего аккаунта гитхаб
-		fetch('https://api.github.com/users/xyp9r/events/public')
+		fetch('https://api.github.com/search/commits?q=author:xyp9r&sort=author-date&order=desc&per_page=1')
 		.then(res => res.json())
 		.then(data => {
-			// Ищем последнее действие типа "PushEvent"
-			const lastPush = data.find(event => 
-				event.type === 'PushEvent' &&
-				event.payload &&
-				event.payload.commits &&
-				event.payload.commits.length > 0
-			);
-
-			if (lastPush && lastPush.payload.commits.length > 0) {
-				// Берем последний коммит из пуша
-				const latestCommit = lastPush.payload.commits[lastPush.payload.commits.length - 1];
+			if (data && data.items && data.items.length > 0) {
+				const latestCommit = data.items[0];
 				setCommitInfo({
-					count: lastPush.payload.commits.length, // Число коммитов
-					message: latestCommit.message // Текст коммита
+					// data.total_count - покажет все коммиты
+					count: data.total_count,
+					message: latestCommit.commit.message
 				});
 			} else {
-				setCommitInfo({ count: 0, message: 'no recent commits' });
+				setCommitInfo({ count: 0, message: 'no public commits yet' });
 			}
 		})
 		.catch(err => {
 			console.error("GitHub API error:", err);
 			setCommitInfo({ count: 'err', message: 'api error'});
-		});
+				});
 	}, []);
 
 	// Функция для обработки клика по стрелочке
