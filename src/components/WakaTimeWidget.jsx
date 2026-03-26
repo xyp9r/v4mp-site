@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function WakaTimeWidget() {
+export default function WakaTimeWidget({ onOpenStats }) {
 	// 1. Память компонента
 	const [hours, setHours] = useState('Loading...');
 	const [langText, setLangText] = useState('awaiting data...');
@@ -94,11 +94,16 @@ export default function WakaTimeWidget() {
 
 	// 5. Отрисосываем HTML
 	return (
-		<div className="status-panel">
+		<div 
+			className="status-panel"
+		>
               <div className="command-line">
                 <span className="prompt">root@v4mp.dev</span> <span className="command">wakatime --today</span>
               </div>
-              <div className="panel-box">
+              <div className="panel-box wakatime-clickable-box"
+              onClick={onOpenStats}
+							style={{ cursor: 'pointer' }}
+						>
                 <div className={`wakatime-icon ${isActive ? 'active-mode' : ''}`}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="16 18 22 12 16 6"></polyline>

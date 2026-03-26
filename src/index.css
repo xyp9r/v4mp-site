@@ -780,3 +780,48 @@ html, body, *, *::before, *::after {
   85% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+/* ---  АНИМАЦИИ И ЭФФЕКТЫ --- */
+
+/* Класс-исключение для кликабельного виджета WakaTime */
+.wakatime-clickable-box {
+    position: relative; /* Важно: чтобы стрелка позиционировалась внутри коробки */
+    padding-right: 45px !important; /* Делаем место справа, чтобы текст не наезжал на стрелку */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Эффект при наведении на всю коробку */
+.wakatime-clickable-box:hover {
+    background-color: rgba(76, 175, 80, 0.05); /* Легкий зеленый подсвет фона */
+    transform: translateY(-2px); /* Коробка чуть всплывает */
+}
+
+/* Сама стрелочка (через псевдоэлемент, чтобы не плодить лишний HTML-код) */
+.wakatime-clickable-box::after {
+    content: '▶'; /* Используем символ залитой стрелочки терминала */
+    position: absolute;
+    right: 20px; /* Отступ справа */
+    top: 50%; /* Центрируем вертикально */
+    transform: translateY(-50%); /* Идеальное центрирование */
+    color: #4caf50; /* Цвет твоего хакерского зеленого */
+    font-size: 14px;
+    opacity: 0.8; /* Чуть приглушаем по умолчанию */
+    transition: opacity 0.2s ease, right 0.2s ease;
+    
+    /* Анимация пульсации, чтобы привлечь внимание */
+    animation: arrowPulse 2s infinite;
+}
+
+/* При наведении стрелка перестает пульсировать, становится ярче и чуть сдвигается */
+.wakatime-clickable-box:hover::after {
+    opacity: 1;
+    right: 15px; /* Чуть сдвигается вправо */
+    animation: none; /* Выключаем пульсацию при наведении */
+}
+
+/* Сама анимация пульсации (плавное мигание) */
+@keyframes arrowPulse {
+    0% { opacity: 0.4; text-shadow: 0 0 0 rgba(76, 175, 80, 0); }
+    50% { opacity: 1; text-shadow: 0 0 10px rgba(76, 175, 80, 0.8); }
+    100% { opacity: 0.4; text-shadow: 0 0 0 rgba(76, 175, 80, 0); }
+}

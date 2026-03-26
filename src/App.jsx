@@ -14,6 +14,7 @@ import ContextMenu from './components/ContextMenu'
 import Projects from './components/Projects'
 import HeartOverlay from './components/HeartOverlay'
 import GitStats from './components/GitStats'
+import WakaStats from './components/WakaStats'
 
 export default function App() {
 
@@ -27,7 +28,7 @@ export default function App() {
       {/* Если isHeartOpen = true, рендерим оверлей и передаем ему функцию для самозакрытия */}
       {isHeartOpen && <HeartOverlay onClose={() => setIsHeartOpen(false)} />}
       
-      {currentPage === 'home' ? (
+      {currentPage === 'home' && (
       <div className="terminal-window">
         {/* ШАПКА */}
         <div className="terminal-header">
@@ -121,13 +122,20 @@ export default function App() {
           {/* ВИДЖЕТЫ (Spotify & Wakatime) */}
           <div className="status-blocks mt-40">
             <SpotifyWidget />
-            <WakaTimeWidget />
+            {/* Добавляем пропс onOpenStats */}
+            <WakaTimeWidget onOpenStats={() => setCurrentPage('wakastats')} />
           </div>
-
         </div>
       </div>
-      ) : (
+  )}
+        {/* Страница 2: проекты*/}
+      {currentPage === 'projects' && (
         <Projects onBack={() => setCurrentPage('home')} />
+          )}
+      
+      {/* Страница 3: вакатайм статистика */}
+      {currentPage === 'wakastats' && (
+        <WakaStats onBack={() => setCurrentPage('home')} />
           )}
 
       {/* КАСТОМНОЕ МЕНЮ (скрыто по умолчанию) */}
