@@ -17,7 +17,7 @@ export default function TelegramStatus () {
 			} else if (data.status === 'offline') {
 				if (data.last_online) {
 					// Исправил синтаксис переменных!
-					setStatusText(`[last online: ${data.last_online}]`);
+					setStatusText(`[seen: ${data.last_online}]`);
 				} else {
 					setStatusText('[offline]');
 				}
