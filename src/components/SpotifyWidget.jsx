@@ -8,6 +8,9 @@ const [coverUrl, setCoverUrl] = useState('');
 // Состояние чтобы понимать прыгает эквалайзер или нет
 const [isPlaying, setIsPlaying] = useState(false);
 
+// Добавляем память для ссылки на трек
+const [trackUrl, setTrackUrl] = useState(false);
+
 useEffect(() => {
 	const LASTFM_USER = 'emotype666';
 	const LASTFM_API_KEY = 'a9c821065d7e2331aa538bc700d77e75';
@@ -27,6 +30,9 @@ useEffect(() => {
 			// Обновляем память компонента
 			setTrackName(track.name);
 			setArtistName(`by ${track.artist['#text']}`);
+
+			// Забираем готовую ссылку из API Last.fm
+			setTrackUrl(track.url)
 
 			// Берем обложку хорошего качества (индекс 2)
 			if (track.image[2]['#text']) {
@@ -58,7 +64,10 @@ return (
 			<span className="command"> music --now-playing</span>
 		</div>
 
-		<div className="panel-box">
+		<div className="panel-box music-clickable-box"
+				onClick={() => trackUrl && window.open(trackUrl, '_blank')}
+				style={{ cursor: 'pointer' }}
+			>
 			{/* Вставляем картинки фоном прямо через стили React */}
 			<div
 				className="album-cover"

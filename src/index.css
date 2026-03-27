@@ -781,7 +781,7 @@ html, body, *, *::before, *::after {
   100% { opacity: 0; }
 }
 
-/* ---  АНИМАЦИИ И ЭФФЕКТЫ --- */
+/* ---  АНИМАЦИИ И ЭФФЕКТЫ ВИДЖЕТОВ --- */
 
 /* Класс-исключение для кликабельного виджета WakaTime */
 .wakatime-clickable-box {
@@ -824,4 +824,13 @@ html, body, *, *::before, *::after {
     0% { opacity: 0.4; text-shadow: 0 0 0 rgba(76, 175, 80, 0); }
     50% { opacity: 1; text-shadow: 0 0 10px rgba(76, 175, 80, 0.8); }
     100% { opacity: 0.4; text-shadow: 0 0 0 rgba(76, 175, 80, 0); }
+}
+
+.music-clickable-box {
+  transition: background-color 0.2 ease, transform 0.1s ease;
+}
+
+.music-clickable-box:hover {
+  background-color: rgba(76, 175, 80, 0.05);
+  transform: translateY(-2px);
 }
