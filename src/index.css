@@ -80,10 +80,12 @@ a, .email-btn, .menu-list li {
 
 /* мой огромный текст */
 .ascii-art {
+  font-family: 'Fira Code', Consolas, monospace !important;
+  white-spacce: pre !important; /* Запрет переносить на новую строку */
   color: #fff;
   font-size: 14px;
   line-height: 1.2;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   overflow-x: auto;
 }
 
