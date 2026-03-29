@@ -6,7 +6,7 @@ import Matrix from './components/Matrix'
 import TypingText from './components/TypingText';
 import CustomCursor from './components/CustomCursor'
 import SpotifyWidget from './components/SpotifyWidget';
-import WakaTimeWidget from './components/WakaTimeWidget'
+import WakaTimeWidget from './components/WakaTimeWidget';
 import TelegramStatus from './components/TelegramStatus';
 import DiscordStatus from './components/DiscordStatus'
 import EmailWidget from './components/EmailWidget'

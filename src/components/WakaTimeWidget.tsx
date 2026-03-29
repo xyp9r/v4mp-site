@@ -1,10 +1,35 @@
 import { useState, useEffect } from 'react';
 
-export default function WakaTimeWidget({ onOpenStats }) {
+interface WakaTimeWidgetProps {
+	onOpenStats: () => void;
+}
+
+// Описываем язык
+interface WakaLanguage {
+	name: string;
+}
+
+// Описываем общее время
+interface WakaGrandTotal {
+	text: string;
+}
+
+// Описываем блок data
+interface WakaData {
+	grand_total: WakaGrandTotal;
+	languages: WakaLanguage[]; // Массив языков
+}
+
+// Главная обертка ответа
+interface WakaResponse {
+	data: WakaData;
+}
+
+export default function WakaTimeWidget({ onOpenStats }: WakaTimeWidgetProps) {
 	// 1. Память компонента
-	const [hours, setHours] = useState('Loading...');
-	const [langText, setLangText] = useState('awaiting data...');
-	const [isActive, setIsActive] = useState(false); // Для зеленого неона на иконке
+	const [hours, setHours] = useState<string>('Loading...');
+	const [langText, setLangText] = useState<string>('awaiting data...');
+	const [isActive, setIsActive] = useState<boolean>(false); // Для зеленого неона на иконке
 
 	useEffect(() => {
 		// Временное хранилище чтобы склеить Javascript in Sublime Text
@@ -20,7 +45,7 @@ export default function WakaTimeWidget({ onOpenStats }) {
 		};
 
 		// 2. Глобальные функции-приемники, которые ждет WakaTime
-		window.wakaTimeCallback = (response) => {
+		(window as any).wakaTimeCallback = (response: any) => {
 			try {
 				const todayData = response.data[response.data.length - 1];
 				const totalTime = todayData.grand_total.text;
@@ -39,10 +64,10 @@ export default function WakaTimeWidget({ onOpenStats }) {
 			}
 		};
 
-		window.wakaLangCallback = (response) => {
+		(window as any).wakaLangCallback = (response: any) => {
 			try {
 				if (response.data && response.data.length > 0) {
-					langCache = response.data.slice(0, 2).map(item => item.name).join(', ');
+					langCache = response.data.slice(0, 2).map((item: any) => item.name).join(', ');
 					updateWakaText();
 				}
 			} catch (error) {
@@ -50,7 +75,7 @@ export default function WakaTimeWidget({ onOpenStats }) {
 			}
 		};
 
-		window.wakaEditorCallback = (response) => {
+		(window as any).wakaEditorCallback = (response: any) => {
 			try {
 				if (response.data && response.data.length > 0) {
 					editorCache = response.data[0].name;
@@ -62,7 +87,7 @@ export default function WakaTimeWidget({ onOpenStats }) {
 		};
 
 		// 3. Универсальный курьер (создает скрипты)
-		const addJsonpScript = (id, url, callbackName) => {
+		const addJsonpScript = (id: string, url: string, callbackName: string) => {
 			const oldScript = document.getElementById(id);
 			if (oldScript) oldScript.remove();
 
