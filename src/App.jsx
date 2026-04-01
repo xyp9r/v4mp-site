@@ -9,7 +9,7 @@ import SpotifyWidget from './components/SpotifyWidget';
 import WakaTimeWidget from './components/WakaTimeWidget';
 import TelegramStatus from './components/TelegramStatus';
 import DiscordStatus from './components/DiscordStatus';
-import EmailWidget from './components/EmailWidget'
+import EmailWidget from './components/EmailWidget';
 import ContextMenu from './components/ContextMenu'
 import Projects from './components/Projects'
 import HeartOverlay from './components/HeartOverlay'

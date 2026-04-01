@@ -1,17 +1,23 @@
-import { useState } from 'react';
+// 1. Добавляем импорт MouseEvent
+import { useState, MouseEvent } from 'react';
 import TypingText from './TypingText';
 
+// 2. создаем строгий тип - регион может быть ТОЛЬКО 'eu' или 'us'
+type Region = 'eu' | 'us';
+
 export default function EmailWidget() {
-	const [region, setRegion] = useState('eu');
-	const [hasSwitched, setHasSwitched] = useState(false);
+  // 3. подсказываем стейту наш новый тип Region и boolean
+  const [region, setRegion] = useState<Region>('eu');
+  const [hasSwitched, setHasSwitched] = useState<boolean>(false);
 
-	const handleSwitch = (newRegion, event) => {
-		event.preventDefault(); 
-		setRegion(newRegion);
-		setHasSwitched(true);
-	};
+  // 4. Жестко описываем функцию: newRegion это ТОЛЬКО 'eu' или 'us', a event - это клик по тегу <a>
+  const handleSwitch = (newRegion: Region, event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    setRegion(newRegion);
+    setHasSwitched(true);
+  };
 
-	const emailText = region === 'eu' ? 'i@v4mp.eu' : 'i@v4mp.us';
+  const emailText = region === 'eu' ? 'i@v4mp.eu' : 'i@v4mp.us';
 
 	return (
 		<li style={{ display: 'flex', alignItems: 'center' }}> 
