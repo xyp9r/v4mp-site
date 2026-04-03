@@ -12,7 +12,7 @@ import DiscordStatus from './components/DiscordStatus';
 import EmailWidget from './components/EmailWidget';
 import ContextMenu from './components/ContextMenu'
 import Projects from './components/Projects'
-import HeartOverlay from './components/HeartOverlay'
+import HeartOverlay from './components/HeartOverlay';
 import GitStats from './components/GitStats';
 import WakaStats from './components/WakaStats'
 
