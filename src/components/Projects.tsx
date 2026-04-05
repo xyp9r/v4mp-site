@@ -35,7 +35,7 @@ export default function Projects({ onBack }: ProjectsProps) {
         <div className="project-desc">interactive web-terminal SPA</div>
         <div className="project-tags">
           <span className="tag">React</span>
-          <span className="tag">JavaScript (ES6+)</span>
+          <span className="tag">TypeScript</span>
           <span className="tag">CSS3</span>
           <span className="tag">Vite</span>
           <span className="tag">Telegram API</span>
