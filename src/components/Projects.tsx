@@ -23,10 +23,26 @@ export default function Projects({ onBack }: ProjectsProps) {
 
         <div className="bio-text" style={{ marginBottom: '20px', textAlign: 'left' }}>
           &gt; ls -la /projects/<br />
-          total 5
+          total 6
         </div>
 
-      {/* 1. НОВЫЙ ПРОЕКТ - REACT ВЕРСИЯ */}
+        {/* waterdash - приложуха для отслеживания воды которую ты пьешь (в разработке) */}
+        <div className="project-card" style={{ pointerEvents: 'none' }}>
+        <div className="project-header">
+          <a href="#" className="project-name">WaterDash (soon)</a>
+          <span className="project-year">2026</span>
+        </div>
+        <div className="project-desc">the description will be available later</div>
+        <div className="project-tags">
+          <span className="tag">you'll</span>
+          <span className="tag">find</span>
+          <span className="tag">out</span>
+          <span className="tag">later</span>
+          <span className="tag">:)</span>
+        </div>
+      </div>
+
+      {/* 2. v4mp react */}
       <div className="project-card">
         <div className="project-header">
           <a href="https://v4mp.dev" className="project-name">v4mp v2 (React)</a>
@@ -47,6 +63,7 @@ export default function Projects({ onBack }: ProjectsProps) {
           <span className="tag">Discord Lanyard API</span>
           <span className="tag">Wakatime API</span>
           <span className="tag">Render CI/CD</span>
+          <span className="tag">GitHub CI/CD</span>
         </div>
       </div>
 
@@ -75,7 +92,7 @@ export default function Projects({ onBack }: ProjectsProps) {
         </div>
       </div>
 
-            {/* 2. СТАРЫЙ DASHBOARD ИЗ HTML */}
+            {/* 4. СТАРЫЙ DASHBOARD ИЗ HTML */}
       <div className="project-card">
         <div className="project-header">
           <a href="https://xyp9r.github.io/my-links-site/" target="_blank" rel="noreferrer" className="project-name">v4mp v1 (Vanilla JS)</a>
@@ -95,7 +112,7 @@ export default function Projects({ onBack }: ProjectsProps) {
         </div>
       </div>
 
-      {/* 4. ИГРА КЛИКЕР */}
+      {/* 5. ИГРА КЛИКЕР */}
       <div className="project-card">
         <div className="project-header">
           <a href="https://xyp9r.github.io/crypto-clicker/" target="_blank" rel="noreferrer" className="project-name">Crypto Clicker Tycoon</a>
@@ -110,7 +127,7 @@ export default function Projects({ onBack }: ProjectsProps) {
         </div>
       </div>
 
-      {/* 5. ПОРТФОЛИО */}
+      {/* 6. ПОРТФОЛИО */}
       <div className="project-card">
         <div className="project-header">
           <a href="https://xyp9r.github.io/my-first-site/index.html" target="_blank" rel="noreferrer" className="project-name">First Site</a>
