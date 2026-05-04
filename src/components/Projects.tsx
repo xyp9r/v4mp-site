@@ -27,18 +27,27 @@ export default function Projects({ onBack }: ProjectsProps) {
         </div>
 
         {/* waterdash - приложуха для отслеживания воды которую ты пьешь (в разработке) */}
-        <div className="project-card" style={{ pointerEvents: 'none' }}>
+        <div className="project-card">
         <div className="project-header">
-          <a href="#" className="project-name">WaterDash (soon)</a>
+          <a href="https://github.com/xyp9r/waterdash" className="project-name">WaterDash</a>
           <span className="project-year">2026</span>
         </div>
-        <div className="project-desc">the description will be available later</div>
+        <div className="project-desc">Full-stack hydration tracker with smart analytics, user profiles, and interactive charts</div>
         <div className="project-tags">
-          <span className="tag">you'll</span>
-          <span className="tag">find</span>
-          <span className="tag">out</span>
-          <span className="tag">later</span>
-          <span className="tag">:)</span>
+          <span className="tag">React</span>
+          <span className="tag">TypeScript</span>
+          <span className="tag">Tailwind CSS</span>
+          <span className="tag">Vite</span>
+          <span className="tag">Recharts</span>
+          <span className="tag">React Router</span>
+          <span className="tag">Node.js</span>
+          <span className="tag">Express</span>
+          <span className="tag">REST API</span>
+          <span className="tag">PostgreSQL</span>
+          <span className="tag">Prisma ORM</span>
+          <span className="tag">JWT Auth</span>
+          <span className="tag">Bcrypt</span>
+          <span className="tag">Docker</span>
         </div>
       </div>
 
