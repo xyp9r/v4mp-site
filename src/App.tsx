@@ -78,7 +78,7 @@ export default function App() {
               <img src="/avatar.png" alt="my profile picture" />
             </div>
             <div className="bio-text">
-            f/e dev / staying lowkey. mostly just centering divs tbh.<br />
+            b/e dev / staying lowkey. mostly just keeping uptime high tbh.<br />
               <span onClick={() => setCurrentPage('projects')} className="projects-title-link" style={{cursor: 'pointer'}}>projects</span>
             </div>
           </div>

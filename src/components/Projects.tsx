@@ -23,36 +23,8 @@ export default function Projects({ onBack }: ProjectsProps) {
 
         <div className="bio-text" style={{ marginBottom: '20px', textAlign: 'left' }}>
           &gt; ls -la /projects/<br />
-          total 7
+          total 6
         </div>
-
-        {/* Моя роадмап начинание обучения заново */}
-
-        <div className="project-card">
-        <div className="project-header">
-          <a href="https://github.com/xyp9r/Fullstack-Roadmap" className="project-name">Fullstack Roadmap</a>
-          <span className="project-year">2026</span>
-        </div>
-        <div className="project-desc">While I was studying, it occurred to me that I wasn’t approaching my full-stack studies the right way, so I decided to start from scratch and learn everything all over again, which is why I created this repository.</div>
-        <div className="project-tags">
-          <span className="tag">HTML5</span>
-          <span className="tag">CSS3</span>
-          <span className="tag">JavaScript</span>
-          <span className="tag">Git</span>
-          <span className="tag">GitHub</span>
-          <span className="tag">Node.js or C# of GO</span>
-          <span className="tag">TypeScript</span>
-          <span className="tag">SQL</span>
-          <span className="tag">NoSQL</span>
-          <span className="tag">REST API</span>
-          <span className="tag">Authentication</span>
-          <span className="tag">Authorization</span>
-          <span className="tag">Docker</span>
-          <span className="tag">Deploy</span>
-          <span className="tag">Architecture</span>
-          <span className="tag">Best Practices</span>
-        </div>
-      </div>
 
         {/* waterdash - приложуха для отслеживания воды которую ты пьешь (в разработке) */}
         <div className="project-card">
