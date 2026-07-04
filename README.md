@@ -34,7 +34,7 @@ This is a fully dynamic Single Page Application (SPA) dashboard built with **Rea
 * `src/main.tsx` - Strict-mode entry point.
 * `src/components/` - Modular, strictly-typed reusable React components (Widgets, Cursors, Statuses).
 * `src/index.css` - Custom styling, UI effects, animations, and mobile breakpoints.
-* `public/` - Static assets, avatars, and custom domain configuration (CNAME).
+* `public/` - Static assets, avatars, and custom domain configuration (CNAME). 
 
 ---
 *Stay out of my system.*
