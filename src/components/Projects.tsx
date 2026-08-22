@@ -10,16 +10,59 @@ interface ProjectsProps {
 // 2. Указываем, что компонент принимает аргументы по правилам ProjectsProps
 export default function Projects({ onBack }: ProjectsProps) {
   return (
+      <div>
+
+      {/* Контейнер с тем где что и как я работал */}
       <div className="container">
-        <div className="command-line" style={{ marginBottom: '30px' }}>
-          <span className="prompt">root@v4mp.dev</span> <span className="command">cd ..</span><br />
-          <span
-            onClick={onBack}
-            style={{ color: '#4caf50', fontSize: '14px', marginTop: '10px', display: 'inline-block', cursor: 'pointer' }}
+          <div className="command-line" style={{ marginBottom: '30px' }}>
+          <span className="prompt">root@v4mp.dev</span> 
+          <br></br><span 
+            className="prompt" 
+            onClick={onBack} 
+            style={{ cursor: 'pointer', transition: 'color 0.2s' }}
+            onMouseOver={(e) => e.target.style.color = '#fff'}
+            onMouseOut={(e) => e.target.style.color = '#4caf50'}
           >
-            [ &lt; return to main]
-          </span> 
+            <div style={{marginTop: '10px',  display: 'inline-flex' }}>
+            cd ..
+            </div>
+          </span>
         </div>
+
+        <div className="bio-text" style={{ marginBottom: '20px', textAlign: 'left' }}>
+          &gt; ls -la /experience/<br />
+          total 1
+        </div>
+
+        <div className="project-card">
+        <div className="project-header">
+  {/* Оборачиваем логотип и название в один div */}
+  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+    <img src="/explitia-logo-removebg-preview.png" alt="explitia logo" style={{ width: '30px', height: '30px' }}/>
+    <a href="https://explitia.com" className="project-name">explitia</a>
+  </div>
+  
+  <span className="project-year">2026 june-present</span>
+</div>
+        <div className="project-desc">interning right now / mostly grinding frontend</div>
+        <div className="project-tags">
+          <span className="tag">Wordpress</span>
+          <span className="tag">Astra</span>
+          <span className="tag">Gutenberg</span>
+          <span className="tag">WPML</span>
+          <span className="tag">PHP</span>
+          <span className="tag">HTML5</span>
+          <span className="tag">CSS</span>
+          <span className="tag">JavaScript (ES6)</span>
+          <span className="tag">Git</span>
+          <span className="tag">Podman</span>
+        </div>
+      </div>
+
+      </div>
+
+      {/* Контейнер с проектами личными */}
+      <div className="container">
 
         <div className="bio-text" style={{ marginBottom: '20px', textAlign: 'left' }}>
           &gt; ls -la /projects/<br />
@@ -151,6 +194,7 @@ export default function Projects({ onBack }: ProjectsProps) {
         </div>
       </div>
 
+    </div>
     </div>
   );
 }

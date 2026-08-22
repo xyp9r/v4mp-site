@@ -79,7 +79,7 @@ export default function App() {
             </div>
             <div className="bio-text">
             b/e dev / staying lowkey. mostly just keeping uptime high tbh.<br />
-              <span onClick={() => setCurrentPage('projects')} className="projects-title-link" style={{cursor: 'pointer'}}>projects</span>
+              <span onClick={() => setCurrentPage('projects')} className="projects-title-link" style={{cursor: 'pointer'}}>experience / projects</span>
             </div>
           </div>
 
