@@ -512,12 +512,15 @@ a, .email-btn, .menu-list li {
   }
 
   .info-block {
+    flex-direction: row; /* Выстраиваем аву и текст друг под друга */
     gap: 15px;
+    text-align: center; /* Текст по центру, чтобы на мобилке смотрелось сочно */
   }
 
   .image-placeholder {
-    width: 350px;
-    height: 140px;
+    width: 120px; /* Возвращаем нормальный квадратный размер */
+    height: 120px;
+    margin: 0 auto; /* Центрируем саму фотку */
   }
 
   /* 3. Ставим блоки Spotify и WakaTime друг под друга */
