@@ -29,7 +29,7 @@ export default function EmailWidget() {
                 {hasSwitched ? (
                 	<span className="type-text">{emailText}</span>
                 ) : (
-                	<TypingText text={emailText} delay={1800} />
+                	<TypingText text={emailText} delay={2300} />
                 )}
             </a>
 

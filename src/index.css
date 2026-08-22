@@ -85,7 +85,7 @@ a, .email-btn, .menu-list li {
 /* мой огромный текст */
 .ascii-art {
   font-family: 'Fira Code', Consolas, monospace !important;
-  white-spacce: pre !important; /* Запрет переносить на новую строку */
+  white-space: pre !important; /* Запрет переносить на новую строку */
   color: #fff;
   font-size: 14px;
   line-height: 1.2;
@@ -129,7 +129,7 @@ a, .email-btn, .menu-list li {
   font-size: 10px;
   color: #444;
   overflow: hidden;
-  flex-shring: 0;
+  flex-shrink: 0;
 }
 
 .image-placeholder img {
@@ -174,7 +174,7 @@ a, .email-btn, .menu-list li {
 
 .projects-title-link:hover {
   transform: scale(1.05);
-  filther: drop-shadow(0 0 5px rgba(76, 175, 80, 0.5));
+  filter: drop-shadow(0 0 5px rgba(76, 175, 80, 0.5));
 }
 
 @keyframes gradientGlow {
@@ -637,6 +637,12 @@ a, .email-btn, .menu-list li {
   font-size: 12px;
 }
 
+/* Статус линкедин */
+#linkedin {
+  color: #4caf50;
+  font-size: 12px;
+}
+
 /* --- ЭФФЕКТ ПЕЧАТАЮЩЕГОСЯ ТЕКСТА И КУРСОР --- */
 
 .typing-cursor::after {
@@ -648,7 +654,7 @@ a, .email-btn, .menu-list li {
 }
 
 @keyframes blink {
-  0% 100% { opacity: 1; }
+  0% , 100% { opacity: 1; }
   50% { opacity: 0; }
 }
 
@@ -777,7 +783,7 @@ html, body, *, *::before, *::after {
   stroke-dashoffset: 200;
   animation: drawHeart 2s linear forwards;
   /* Добавляем легкое неоновое свечение самому сердцу */
-  filther: drop-shadow(0 0 8px rgba(76, 175, 80, 0.8));
+  filter: drop-shadow(0 0 8px rgba(76, 175, 80, 0.8));
 }
 
 /* Анимация рисования линий */

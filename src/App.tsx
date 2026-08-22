@@ -91,9 +91,7 @@ export default function App() {
           <ul className="social-links">
             <li>
               <a href="https://t.me/dxrge" target="_blank" rel="noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42l10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001l-.122 1.715c.179.035.355.067.531.097l.005-.002l.005.002l2.733 5.447c.202.4.404.8.606 1.2c.202-.4.404-.8.606-1.2l1.55-2.699c.688-.328 1.377-.657 2.065-.985l3.638 2.686c.838.462 1.441.227 1.65-.776l2.991-14.085c.306-1.23-.468-1.797-1.603-1.267z"/>
-                </svg>
+                <svg viewBox="0 0 48 48" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" fill="currentColor"></path> </g></svg>
                 <TypingText text="md" delay={300} />
                   </a>
                 <TelegramStatus />
@@ -117,6 +115,14 @@ export default function App() {
                 <TypingText text="xyp9r" delay={1300} />
                 </a>
               <GitStats />
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/ivan-sirenko-313825412/" target="_blank" rel="noreferrer">
+                <svg fill="currentColor" height="18px" width="18px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 504.4 504.4" xmlSpace="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M377.6,0.2H126.4C56.8,0.2,0,57,0,126.6v251.6c0,69.2,56.8,126,126.4,126H378c69.6,0,126.4-56.8,126.4-126.4V126.6 C504,57,447.2,0.2,377.6,0.2z M168,408.2H96v-208h72V408.2z M131.6,168.2c-20.4,0-36.8-16.4-36.8-36.8c0-20.4,16.4-36.8,36.8-36.8 c20.4,0,36.8,16.4,36.8,36.8C168,151.8,151.6,168.2,131.6,168.2z M408.4,408.2H408h-60V307.4c0-24.4-3.2-55.6-36.4-55.6 c-34,0-39.6,26.4-39.6,54v102.4h-60v-208h56v28h1.6c8.8-16,29.2-28.4,61.2-28.4c66,0,77.6,38,77.6,94.4V408.2z"></path> </g> </g> </g></svg>
+                <TypingText text="ivan sirenko" delay={1800} />
+                </a>
+              <span id="linkedin">[work]</span>
             </li>
 
             <EmailWidget />
