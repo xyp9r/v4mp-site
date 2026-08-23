@@ -13,26 +13,21 @@ export default function Projects({ onBack }: ProjectsProps) {
       <div>
 
       {/* Контейнер с тем где что и как я работал */}
-      <div className="container">
-          <div className="command-line" style={{ marginBottom: '30px' }}>
-          <span className="prompt">root@v4mp.dev</span> 
-          <br></br><span 
+      <div className="container" style={{ padding: '20px', maxWidth: '850px' }}>
+      <div className="terminal-header" style={{ borderBottom: '1px dashed #333', paddingBottom: '10px', marginBottom: '20px' }}>
+        <div className="header-item">
+          <span 
             className="prompt" 
             onClick={onBack} 
             style={{ cursor: 'pointer', transition: 'color 0.2s' }}
             onMouseOver={(e) => e.target.style.color = '#fff'}
             onMouseOut={(e) => e.target.style.color = '#4caf50'}
           >
-            <div style={{marginTop: '10px',  display: 'inline-flex' }}>
             cd ..
-            </div>
           </span>
+          <span style={{ color: '#666', marginLeft: '8px' }}>/experience/total-1</span>
         </div>
-
-        <div className="bio-text" style={{ marginBottom: '20px', textAlign: 'left' }}>
-          &gt; ls -la /experience/<br />
-          total 1
-        </div>
+      </div>
 
         <div className="project-card">
         <div className="project-header">
@@ -62,12 +57,21 @@ export default function Projects({ onBack }: ProjectsProps) {
       </div>
 
       {/* Контейнер с проектами личными */}
-      <div className="container">
-
-        <div className="bio-text" style={{ marginBottom: '20px', textAlign: 'left' }}>
-          &gt; ls -la /projects/<br />
-          total 6
+      <div className="container" style={{ padding: '20px', maxWidth: '850px' }}>
+      <div className="terminal-header" style={{ borderBottom: '1px dashed #333', paddingBottom: '10px', marginBottom: '20px' }}>
+        <div className="header-item">
+          <span 
+            className="prompt" 
+            onClick={onBack} 
+            style={{ cursor: 'pointer', transition: 'color 0.2s' }}
+            onMouseOver={(e) => e.target.style.color = '#fff'}
+            onMouseOut={(e) => e.target.style.color = '#4caf50'}
+          >
+            cd ..
+          </span>
+          <span style={{ color: '#666', marginLeft: '8px' }}>/projects/total-6</span>
         </div>
+      </div>
 
         {/* waterdash - приложуха для отслеживания воды которую ты пьешь (в разработке) */}
         <div className="project-card">
