@@ -26,7 +26,7 @@ export default function Matrix() {
 		// Японские символы и цифры из твоего оригинала
 		const characters = 'アカサタナハマヤラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-		let animationFrameId; // сюда запишем ID анимации чтобы потом ее остановить
+		let animationFrameId:any ; // сюда запишем ID анимации чтобы потом ее остановить
 
 		// ---  Новая логика чтобы на больших герцах не было быстро  ---
 
