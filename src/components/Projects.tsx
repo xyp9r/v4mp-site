@@ -51,6 +51,9 @@ export default function Projects({ onBack }: ProjectsProps) {
           <span className="tag">JavaScript (ES6)</span>
           <span className="tag">Git</span>
           <span className="tag">Podman</span>
+          <span className="tag">Python</span>
+          <span className="tag">Automation</span>
+          <span className="tag">AI Tools</span>
         </div>
       </div>
 
